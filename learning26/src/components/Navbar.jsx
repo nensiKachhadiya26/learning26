@@ -30,6 +30,9 @@ export const Navbar = () => {
          <li class="nav-item">
             <Link class="nav-link" to="netflixpodcast"> Podcast</Link>
         </li>
+        
+            
+        
         </ul>
     
     </div>
