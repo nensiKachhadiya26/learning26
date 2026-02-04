@@ -23,6 +23,7 @@ import { ErrorNotFound } from './components/ErrorNotFound'
 import { Watch } from './components/Watch'
 import { Team } from './components/Team'
 import { TeamDetail } from './components/TeamDetail'
+import { Show } from './components/Show'
 //import './App.css'
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Route path='/*' element={<ErrorNotFound/>}></Route>
         <Route path='/team' element={<Team/>}></Route>
         <Route path='/teamdetail/:name' element={<TeamDetail/>}></Route>
+        <Route path='/show/:name' element={<Show/>}></Route>
       </Routes>
     </div>
   )
