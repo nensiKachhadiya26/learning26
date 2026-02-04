@@ -21,6 +21,8 @@ import { NetflixPodcast } from './components/NetflixPodcast'
 import { HomeComponent } from './components/HomeComponent'
 import { ErrorNotFound } from './components/ErrorNotFound'
 import { Watch } from './components/Watch'
+import { Team } from './components/Team'
+import { TeamDetail } from './components/TeamDetail'
 //import './App.css'
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
         <Route path='/' element={<HomeComponent/>}></Route>
         <Route path='/watch/:name' element={<Watch/>}></Route>
         <Route path='/*' element={<ErrorNotFound/>}></Route>
+        <Route path='/team' element={<Team/>}></Route>
+        <Route path='/teamdetail/:name' element={<TeamDetail/>}></Route>
       </Routes>
     </div>
   )
