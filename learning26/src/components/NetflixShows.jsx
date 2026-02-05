@@ -5,7 +5,7 @@ export const NetflixShows = () => {
   return (
     <div style={{textAlign:"center"}}>
         <h1>Netflix Shows</h1>
-        <ul>
+        
           <li>
             <Link to="/watch/moneyheist">Money Heist</Link>
           </li>
@@ -16,7 +16,7 @@ export const NetflixShows = () => {
             <Link to="/watch/strangerthings">Stranger Things</Link>
           </li>
           
-        </ul>
+        
     </div>
   )
 }
