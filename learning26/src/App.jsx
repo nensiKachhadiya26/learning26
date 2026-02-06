@@ -24,6 +24,10 @@ import { Watch } from './components/Watch'
 import { Team } from './components/Team'
 import { TeamDetail } from './components/TeamDetail'
 import { Show } from './components/Show'
+import { FunctionDemo1 } from './components/FunctionDemo1'
+import { UseStateDemo1 } from './components/UseStateDemo1'
+import { UseStateDemo2 } from './components/UseStateDemo2'
+import { UseStateDemo3 } from './components/UseStateDemo3'
 //import './App.css'
 
 function App() {
@@ -45,6 +49,11 @@ function App() {
         <Route path='/team' element={<Team/>}></Route>
         <Route path='/teamdetail/:name' element={<TeamDetail/>}></Route>
         <Route path='/show/:name' element={<Show/>}></Route>
+        <Route path='/functiondemo1' element={<FunctionDemo1/>}></Route>
+        <Route path='/usestatedemo1' element={<UseStateDemo1/>}></Route>
+        <Route path='/usestatedemo2' element={<UseStateDemo2/>}></Route>
+        <Route path='/usestatedemo3' element={<UseStateDemo3/>}></Route>
+
       </Routes>
     </div>
   )
