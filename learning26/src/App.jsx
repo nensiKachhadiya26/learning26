@@ -31,6 +31,7 @@ import { UseStateDemo3 } from './components/UseStateDemo3'
 import { Employee } from './components/Employee'
 import { InputDemo1 } from './components/Input/InputDemo1'
 import { CustomerDetail } from './components/Input/CustomerDetail'
+import { Product } from './components/Product'
 
 //import './App.css'
 
@@ -60,6 +61,7 @@ function App() {
         <Route path='/employee' element={<Employee/>}></Route>
         <Route path='/inputdemo1' element={<InputDemo1/>}></Route>
         <Route path='/customerdetail' element={<CustomerDetail/>}></Route>
+        <Route path='/product' element={<Product/>}></Route>
       </Routes>
     </div>
   )
