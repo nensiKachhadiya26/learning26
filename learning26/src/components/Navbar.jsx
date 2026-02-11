@@ -46,9 +46,9 @@ export const Navbar = () => {
         <li class="nav-item">
             <Link class="nav-link" to="usestatedemo3">UseSateDemo3</Link>
         </li>
-        <li class="nav-item">
+        {/* <li class="nav-item">
             <Link class="nav-link" to="employee">Employees</Link>
-        </li>
+        </li> */}
          <li class="nav-item">
             <Link class="nav-link" to="inputdemo1">InputDemo1</Link>
         </li>
@@ -58,9 +58,9 @@ export const Navbar = () => {
          <li class="nav-item">
             <Link class="nav-link" to="customerdetail">CustomerDetails</Link>
         </li>
-          <li class="nav-item">
+          {/* <li class="nav-item">
             <Link class="nav-link" to="product">Product</Link>
-        </li>
+        </li> */}
          <li class="nav-item">
             <Link class="nav-link" to="formdemo1">FormDemo1</Link>
         </li>
@@ -69,6 +69,15 @@ export const Navbar = () => {
         </li>
          <li class="nav-item">
             <Link class="nav-link" to="formdemo3">FormDemo3</Link>
+        </li>
+         <li class="nav-item">
+            <Link class="nav-link" to="dropdown">DropDown</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link" to="school">School</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link" to="college">College</Link>
         </li>
         </ul>
     
