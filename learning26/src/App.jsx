@@ -32,6 +32,9 @@ import { Employee } from './components/Employee'
 import { InputDemo1 } from './components/Input/InputDemo1'
 import { CustomerDetail } from './components/Input/CustomerDetail'
 import { Product } from './components/Product'
+import { FormDemo1 } from './components/form/FormDemo1'
+import { FormDemo2 } from './components/form/FormDemo2'
+import { FormDemo3 } from './components/form/FormDemo3'
 
 //import './App.css'
 
@@ -62,6 +65,9 @@ function App() {
         <Route path='/inputdemo1' element={<InputDemo1/>}></Route>
         <Route path='/customerdetail' element={<CustomerDetail/>}></Route>
         <Route path='/product' element={<Product/>}></Route>
+        <Route path='/formdemo1' element={<FormDemo1/>}></Route>
+        <Route path='/formdemo2' element={<FormDemo2/>}></Route>
+        <Route path='/formdemo3' element={<FormDemo3/>}></Route>
       </Routes>
     </div>
   )
