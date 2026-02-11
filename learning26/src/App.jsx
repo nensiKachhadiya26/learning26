@@ -36,6 +36,9 @@ import { FormDemo1 } from './components/form/FormDemo1'
 import { FormDemo2 } from './components/form/FormDemo2'
 import { FormDemo3 } from './components/form/FormDemo3'
 import { InputTask1 } from './components/Input/InputTask1'
+import { Dropdown } from './components/Dropdown'
+import { School } from './components/School'
+import { College } from './components/College'
 
 //import './App.css'
 
@@ -70,6 +73,9 @@ function App() {
         <Route path='/formdemo2' element={<FormDemo2/>}></Route>
         <Route path='/formdemo3' element={<FormDemo3/>}></Route>
         <Route path='/inputtask1' element={<InputTask1/>}></Route>
+        <Route path='/dropdown' element={<Dropdown/>}></Route>
+        <Route path='/school' element={<School/>}></Route>
+        <Route path='/college' element={<College/>}></Route>
       </Routes>
     </div>
   )
