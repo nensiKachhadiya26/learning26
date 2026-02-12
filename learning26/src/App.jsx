@@ -39,6 +39,10 @@ import { InputTask1 } from './components/Input/InputTask1'
 import { Dropdown } from './components/Dropdown'
 import { School } from './components/School'
 import { College } from './components/College'
+import { FormValidation } from './components/form/FormValidation'
+import { LoginValidation } from './components/form/LoginValidation'
+import { RegisterValidation } from './components/form/RegisterValidation'
+
 
 //import './App.css'
 
@@ -76,6 +80,9 @@ function App() {
         <Route path='/dropdown' element={<Dropdown/>}></Route>
         <Route path='/school' element={<School/>}></Route>
         <Route path='/college' element={<College/>}></Route>
+        <Route path='/formvalidation' element={<FormValidation/>}></Route>
+        <Route path='/loginvalidation' element={<LoginValidation/>}></Route>
+        <Route path='/registervalidation' element={<RegisterValidation/>}></Route>
       </Routes>
     </div>
   )
