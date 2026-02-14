@@ -42,6 +42,9 @@ import { College } from './components/College'
 import { FormValidation } from './components/form/FormValidation'
 import { LoginValidation } from './components/form/LoginValidation'
 import { RegisterValidation } from './components/form/RegisterValidation'
+import { FormDemo4 } from './components/form/FormDemo4'
+import { FormDemo5 } from './components/form/FormDemo5'
+import { FormTask } from './components/form/FormTask'
 
 
 //import './App.css'
@@ -83,6 +86,9 @@ function App() {
         <Route path='/formvalidation' element={<FormValidation/>}></Route>
         <Route path='/loginvalidation' element={<LoginValidation/>}></Route>
         <Route path='/registervalidation' element={<RegisterValidation/>}></Route>
+        <Route path='/formdemo4' element={<FormDemo4/>}></Route>
+        <Route path='/formdemo5' element={<FormDemo5/>}></Route>
+        <Route path='/formtask' element={<FormTask/>}></Route>
       </Routes>
     </div>
   )
