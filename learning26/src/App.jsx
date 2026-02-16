@@ -45,6 +45,7 @@ import { RegisterValidation } from './components/form/RegisterValidation'
 import { FormDemo4 } from './components/form/FormDemo4'
 import { FormDemo5 } from './components/form/FormDemo5'
 import { FormTask } from './components/form/FormTask'
+import { PasswordWatchTask } from './components/form/PasswordWatchTask'
 
 
 //import './App.css'
@@ -89,6 +90,7 @@ function App() {
         <Route path='/formdemo4' element={<FormDemo4/>}></Route>
         <Route path='/formdemo5' element={<FormDemo5/>}></Route>
         <Route path='/formtask' element={<FormTask/>}></Route>
+        <Route path='/passwordwatchtask' element={<PasswordWatchTask/>}></Route>
       </Routes>
     </div>
   )

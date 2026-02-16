@@ -97,6 +97,9 @@ export const Navbar = () => {
         <li class="nav-item">
             <Link class="nav-link" to="formtask">FormTask</Link>
         </li>
+         <li class="nav-item">
+            <Link class="nav-link" to="passwordwatchtask">PasswordWatchTask</Link>
+        </li>
         </ul>
     
     </div>
