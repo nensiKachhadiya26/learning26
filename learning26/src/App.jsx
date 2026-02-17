@@ -46,6 +46,8 @@ import { FormDemo4 } from './components/form/FormDemo4'
 import { FormDemo5 } from './components/form/FormDemo5'
 import { FormTask } from './components/form/FormTask'
 import { PasswordWatchTask } from './components/form/PasswordWatchTask'
+import { ApiDemo1 } from './components/Api/ApiDemo1'
+
 
 
 //import './App.css'
@@ -91,6 +93,7 @@ function App() {
         <Route path='/formdemo5' element={<FormDemo5/>}></Route>
         <Route path='/formtask' element={<FormTask/>}></Route>
         <Route path='/passwordwatchtask' element={<PasswordWatchTask/>}></Route>
+        <Route path='/apidemo1' element={<ApiDemo1/>}></Route>
       </Routes>
     </div>
   )
