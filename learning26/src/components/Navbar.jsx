@@ -85,7 +85,7 @@ export const Navbar = () => {
          <li class="nav-item">
             <Link class="nav-link" to="loginvalidation">Loginvalidation</Link>
         </li> */}
-        <li class="nav-item">
+        {/* <li class="nav-item">
             <Link class="nav-link" to="registervalidation">Registervalidation</Link>
         </li>
         <li class="nav-item">
@@ -96,7 +96,7 @@ export const Navbar = () => {
         </li>
         <li class="nav-item">
             <Link class="nav-link" to="formtask">FormTask</Link>
-        </li>
+        </li> */}
          <li class="nav-item">
             <Link class="nav-link" to="passwordwatchtask">PasswordWatchTask</Link>
         </li>
@@ -104,7 +104,19 @@ export const Navbar = () => {
             <Link class="nav-link" to="apidemo1">ApiDemo1</Link>
         </li>
          <li class="nav-item">
-            <Link class="nav-link" to="apidemotask1">ApiDemo1</Link>
+            <Link class="nav-link" to="apidemotask1">ApiDemoTask1</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link" to="apidemotask2">ApiDemoTask2</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link" to="apidemotodo">ApiDemoTodo</Link>
+        </li>
+         <li class="nav-item">
+            <Link class="nav-link" to="apidemopost">ApiDemoPost</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link" to="apidemousers">ApiDemoUsers</Link>
         </li>
         </ul>
     

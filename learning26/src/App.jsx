@@ -47,6 +47,11 @@ import { FormDemo5 } from './components/form/FormDemo5'
 import { FormTask } from './components/form/FormTask'
 import { PasswordWatchTask } from './components/form/PasswordWatchTask'
 import { ApiDemo1 } from './components/Api/ApiDemo1'
+import { ApiDemoTask1 } from './components/Api/ApiDemoTask1'
+import { ApiDemoTask2 } from './components/Api/ApiDemoTask2'
+import { ApiDemoTodo } from './components/Api/ApiDemoTodo'
+import { ApiDemoPost } from './components/Api/ApiDemoPost'
+import { ApiDemoUsers } from './components/Api/ApiDemoUsers'
 
 
 
@@ -94,6 +99,11 @@ function App() {
         <Route path='/formtask' element={<FormTask/>}></Route>
         <Route path='/passwordwatchtask' element={<PasswordWatchTask/>}></Route>
         <Route path='/apidemo1' element={<ApiDemo1/>}></Route>
+        <Route path='/apidemotask1' element={<ApiDemoTask1/>}></Route>
+        <Route path='/apidemotask2' element={<ApiDemoTask2/>}></Route>
+        <Route path='/apidemotodo' element={<ApiDemoTodo/>}></Route>
+        <Route path='/apidemopost' element={<ApiDemoPost/>}></Route>
+        <Route path='/apidemousers' element={<ApiDemoUsers/>}></Route>
       </Routes>
     </div>
   )
