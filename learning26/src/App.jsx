@@ -52,6 +52,12 @@ import { ApiDemoTask2 } from './components/Api/ApiDemoTask2'
 import { ApiDemoTodo } from './components/Api/ApiDemoTodo'
 import { ApiDemoPost } from './components/Api/ApiDemoPost'
 import { ApiDemoUsers } from './components/Api/ApiDemoUsers'
+import { OmdbSearch } from './components/Api/OmdbSearch'
+import { MovieGrid } from './components/Api/MovieGrid'
+import { MovieDetail } from './components/Api/MovieDetail'
+import { InputMovie } from './components/Api/InputMovie'
+import { ApiDemo3 } from './components/Api/ApiDemo3'
+
 
 
 
@@ -104,6 +110,11 @@ function App() {
         <Route path='/apidemotodo' element={<ApiDemoTodo/>}></Route>
         <Route path='/apidemopost' element={<ApiDemoPost/>}></Route>
         <Route path='/apidemousers' element={<ApiDemoUsers/>}></Route>
+        <Route path='/omdbsearch' element={<OmdbSearch/>}></Route>
+        <Route path='/moviegrid' element={<MovieGrid/>}></Route>
+        <Route path='/movie/:id' element={<MovieDetail/>} ></Route> 
+        <Route path='/inputmovie' element={<InputMovie/>}></Route> 
+        <Route path='/apidemo3' element={<ApiDemo3/>}></Route>      
       </Routes>
     </div>
   )

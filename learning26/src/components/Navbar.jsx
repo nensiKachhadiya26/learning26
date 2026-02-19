@@ -97,7 +97,7 @@ export const Navbar = () => {
         <li class="nav-item">
             <Link class="nav-link" to="formtask">FormTask</Link>
         </li> */}
-         <li class="nav-item">
+         {/* <li class="nav-item">
             <Link class="nav-link" to="passwordwatchtask">PasswordWatchTask</Link>
         </li>
         <li class="nav-item">
@@ -105,8 +105,8 @@ export const Navbar = () => {
         </li>
          <li class="nav-item">
             <Link class="nav-link" to="apidemotask1">ApiDemoTask1</Link>
-        </li>
-        <li class="nav-item">
+        </li> */}
+        {/* <li class="nav-item">
             <Link class="nav-link" to="apidemotask2">ApiDemoTask2</Link>
         </li>
         <li class="nav-item">
@@ -117,6 +117,18 @@ export const Navbar = () => {
         </li>
         <li class="nav-item">
             <Link class="nav-link" to="apidemousers">ApiDemoUsers</Link>
+        </li> */}
+         <li class="nav-item">
+            <Link class="nav-link" to="omdbsearch">OmdbSearch</Link>
+        </li>
+           <li class="nav-item">
+            <Link className="nav-link" to="moviegrid">MovieGrid</Link>
+        </li>
+        <li class="nav-item">
+            <Link className="nav-link" to="inputmovie">InputMovie</Link>
+        </li>
+         <li class="nav-item">
+            <Link className="nav-link" to="apidemo3">ApiDemo3</Link>
         </li>
         </ul>
     
