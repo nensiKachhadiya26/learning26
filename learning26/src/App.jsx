@@ -55,7 +55,7 @@ import { ApiDemoUsers } from './components/Api/ApiDemoUsers'
 import { OmdbSearch } from './components/Api/OmdbSearch'
 import { MovieGrid } from './components/Api/MovieGrid'
 import { MovieDetail } from './components/Api/MovieDetail'
-import { InputMovie } from './components/Api/InputMovie'
+import  InputMovie  from './components/Api/InputMovie'
 import { ApiDemo3 } from './components/Api/ApiDemo3'
 
 
