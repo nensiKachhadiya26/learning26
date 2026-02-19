@@ -1,15 +1,19 @@
 import axios from "axios"
-import React, { useState } from "react"
+import React, { useState  } from "react"
 import { Link } from "react-router-dom"
 
 
 export const MovieGrid = () => {
   const [movies, setMovies] = useState([])
+    const [searchParam, setsearchParam] = useState("Iron Man")
+
+
+
 
   const movieSearch = async () => {
     try 
     {
-      const response = await axios.get("https://www.omdbapi.com/?apikey=825a53ff&s=Animal")
+      const response = await axios.get(`https://www.omdbapi.com/?apikey=30e75603&s=${searchParam}`)
       setMovies(response.data.Search || [])
     } 
     catch (error) 
@@ -17,6 +21,7 @@ export const MovieGrid = () => {
       console.log("Error fetching movies", error)
     }
   }
+ 
 
   return (
     <div style={{ textAlign: "center" }}>

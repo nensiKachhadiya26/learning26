@@ -20,10 +20,7 @@ export const ApiDemo3 = () => {
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>Api Demo 3</h1>
-      <form
-        onSubmit={handleSubmit(submithandler)}
-        
-      >
+      <form onSubmit={handleSubmit(submithandler)}>
         <div >
           <label>Name:</label><br />
           <input type="text" {...register("name")} required />

@@ -1,87 +1,105 @@
-import React, { useState } from "react";
-import axios from "axios";
+import axios from "axios"
+import React, { useState } from "react"
+import { Link } from "react-router-dom"
 
-export const InputMovie = () => {
-  const [movieName, setMovieName] = useState(""); // store input
-  const [movieData, setMovieData] = useState(null); // store API result
-  const [loading, setLoading] = useState(false); // loading state
-  const [error, setError] = useState(""); // error message
+const InputMovie = () => {
 
-  const API_KEY = "30e75603";
+  const [movies, setMovies] = useState([])
+  const [searchParam, setSearchParam] = useState("")
+  const [error, setError] = useState("")
 
-  const handleSearch = async () => {
-    if (!movieName.trim()) {
-      alert("Please enter a movie name!");
-      return;
+  const movieSearch = async () => {
+
+    if (!searchParam.trim()) {
+      setError("Please enter a movie name")
+      setMovies([])
+      return
     }
-
-    setLoading(true);
-    setError("");
-    setMovieData(null);
 
     try {
-      // Encode movie name for URL
-      const url = `https://www.omdbapi.com/?t=${encodeURIComponent(
-        movieName
-      )}&apikey=${API_KEY}`;
+      const response = await axios.get(
+        `https://www.omdbapi.com/?apikey=30e75603&s=${searchParam}`
+      )
 
-      const res = await axios.get(url);
-      console.log(res.data); // for debugging
-
-      if (res.data.Response === "True") {
-        setMovieData(res.data);
+      if (response.data.Response === "False") {
+        setError(response.data.Error)
+        setMovies([])
       } else {
-        setError(res.data.Error || "Movie not found!");
+        setMovies(response.data.Search)
+        setError("")
       }
+
     } catch (err) {
-      console.error(err);
-      setError("Error fetching movie data!");
-    } finally {
-      setLoading(false);
+      setError("Something went wrong!")
+      setMovies([])
     }
-  };
+  }
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Movie Search App</h1>
+    <div style={{ textAlign: "center", padding: "20px" , backgroundColor:"aquamarine"}}>
+
+      <h1>Movie Search</h1>
 
       <input
         type="text"
-        value={movieName}
-        onChange={(e) => setMovieName(e.target.value)}
-        placeholder="Enter movie name"
-        style={{ padding: "10px", width: "250px", marginRight: "10px" }}
+        placeholder="Enter movie name..."
+        value={searchParam}
+        onChange={(e) => setSearchParam(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") movieSearch()
+        }}
+        style={{ padding: "8px", width: "250px" }}
       />
-      <button onClick={handleSearch} style={{ padding: "10px 20px" }}>
+
+      <button
+        onClick={movieSearch}
+        style={{ marginLeft: "10px", padding: "8px" }}
+      >
         Search
       </button>
 
-      {loading && <p>Loading...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
 
-      {movieData && (
-        <div style={{ marginTop: "30px" }}>
-          <h2>{movieData.Title}</h2>
-          {movieData.Poster && movieData.Poster !== "N/A" && (
-            <img src={movieData.Poster} alt={movieData.Title} width="200" />
-          )}
-          <p>
-            <strong>Year:</strong> {movieData.Year}
-          </p>
-          <p>
-            <strong>Genre:</strong> {movieData.Genre}
-          </p>
-          <p>
-            <strong>Director:</strong> {movieData.Director}
-          </p>
-          <p>
-            <strong>Actors:</strong> {movieData.Actors}
-          </p>
-          <p>
-            <strong>Plot:</strong> {movieData.Plot}
-          </p>
-        </div>
-      )}
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "40px",
+          marginTop: "30px"
+        }}
+      >
+        {movies.map((movie) => (
+          <div
+            key={movie.imdbID}
+            style={{
+              width: "250px",
+              border: "1px solid #ccc",
+              padding: "10px",
+              borderRadius: "8px"
+            }}
+          >
+
+            <h3>{movie.Title}</h3>
+
+            <img
+              src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/250x350"}
+              alt={movie.Title}
+              style={{ width: "100%", height: "350px", objectFit: "cover" }}
+            />
+
+            <Link to={`/movie/${movie.imdbID}`}>
+              <button style={{ marginTop: "10px", padding: "6px 10px" }}>
+                Details
+              </button>
+            </Link>
+
+          </div>
+        ))}
+      </div>
+
     </div>
-  );
-};
+  )
+}
+
+export default InputMovie
